@@ -5,6 +5,8 @@ import AppContext from '../context/AppContext';
 // import handleSumTotal from '../utils/index';
 import '../styles/components/Payment.css';
 
+const PayPal = process.env.REACT_APP_PAYPAL_CLIENT_ID;
+
 const Payment = () => {
   const { state, addNewOrder } = useContext(AppContext);
   const { cart, buyer } = state;
@@ -18,8 +20,7 @@ const Payment = () => {
   };
 
   const paypalOptions = {
-    clientId:
-      'ATYFVpD_cHMwUr-rQswqmENoWGveCbkrLSgWFAIMPzYtQVgDORTtHv3xwGOAye7LRcGMqrL-40VJbtMv',
+    clientId: PayPal,
     intent: 'capture',
     currency: 'USD',
   };
