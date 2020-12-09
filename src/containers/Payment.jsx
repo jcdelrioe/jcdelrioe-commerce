@@ -5,7 +5,7 @@ import AppContext from '../context/AppContext';
 // import handleSumTotal from '../utils/index';
 import '../styles/components/Payment.css';
 
-const PayPal = process.env.REACT_APP_PAYPAL_CLIENT_ID;
+const PayPal = process.env.react_app_paypal_client_id;
 
 const Payment = () => {
   const { state, addNewOrder } = useContext(AppContext);
